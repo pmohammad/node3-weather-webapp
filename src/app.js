@@ -7,6 +7,8 @@ const wi = require('./utils/weatherinfo.js')
 
 const app = express()
 
+const port = process.env.PORT || 3000
+
 //setup path for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewPath  = path.join(__dirname,'../templates/views')
@@ -87,6 +89,6 @@ app.get('*', (req,res) =>{
         name: 'Mohammad Dawood Petlawad'
     })
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server is running')
 })
