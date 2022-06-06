@@ -8,7 +8,7 @@ const weatherInfo = (latitude, longitude, callback) => {
         } else if(body.success === false ) {
             callback(body.error.info)
         } else {
-            const result = "In "+ body.location.name+", Its "+body.current.weather_descriptions[0]+" and there is currently " + body.current.temperature + " degree out and feels like "+ body.current.feelslike
+            const result = "In "+ body.location.name+", Its "+body.current.weather_descriptions[0]+" and there is currently " + body.current.temperature + " degree out and feels like "+ body.current.feelslike + "and humidity is "+ body.current.humidity
             callback(result)
         }
     })
